@@ -1,0 +1,406 @@
+<html> 
+<head>
+<meta charset=utf-8 />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<title>JavaScript program to calculate multiplication and division of two numbers </title>
+<style type="text/css">
+body {margin: 50px;}
+table {  
+       font-family: arial, sans-serif;  
+       border-collapse: collapse;  
+      text-align: center;
+      width: 80%;
+      margin: 0px auto;
+      }
+  #htmlContent{
+     text-align: center;
+  }  
+  td, th, button {  
+     border: 1px solid #dddddd;  
+     text-align: center;  
+     padding: 8px;  
+  }  
+  button {  
+    border: 1px solid black;   
+  } 
+  tr:nth-child(even) {  
+    background-color: #dddddd;  
+  }  
+</style> 
+</head>
+<body>
+<script>
+function multiplyBy()
+{
+        num1 = document.getElementById("Isalary").value;
+        num2 = document.getElementById("Psalary").value;
+        num3 = document.getElementById("Ibonus").value;
+        num4 = document.getElementById("Pbonus").value;
+        num5 = document.getElementById("Iother").value;
+        num6 = document.getElementById("Pother").value;
+        num7 = document.getElementById("TVRelated").value;
+        num8 = document.getElementById("Water").value;
+        num9 = document.getElementById("GasandElectricity").value;
+        num10 = document.getElementById("TelephoneBill").value;
+        num11 = document.getElementById("RentorMortgage").value;
+        num12 = document.getElementById("ServiceCharges").value;
+        num13 = document.getElementById("Regular").value;
+        num14 = document.getElementById("Pension").value;
+        num15 = document.getElementById("OtherSavings").value;
+        num16 = document.getElementById("Food").value;
+        num17 = document.getElementById("Fuel").value;
+        num18 = document.getElementById("Travel").value;
+        num19 = document.getElementById("Entertainment").value;
+        num20 = document.getElementById("CarBill").value;
+        num21 = document.getElementById("StudentLoans").value;
+        num22 = document.getElementById("CreditCards").value;
+        num23 = document.getElementById("OtherDebts").value;
+        num24 = document.getElementById("LifeCover").value;
+        num25 = document.getElementById("BuildingInsurance").value;
+        num26 = document.getElementById("HealthInsurance").value;
+        num27 = document.getElementById("OtherInsurance").value;
+        document.getElementById("isalary").innerHTML = num1
+        document.getElementById("psalary").innerHTML = num2
+        document.getElementById("ibonus").innerHTML = num3
+        document.getElementById("pbonus").innerHTML = num4
+        document.getElementById("iother").innerHTML = num5
+        document.getElementById("pother").innerHTML = num6
+        document.getElementById("tvrelated").innerHTML = num7
+        document.getElementById("water").innerHTML = num8
+        document.getElementById("gasandelectricity").innerHTML = num9
+        document.getElementById("telephonebill").innerHTML = num10
+        document.getElementById("rentormortgage").innerHTML = num11
+        document.getElementById("servicecharges").innerHTML = num12
+        document.getElementById("regular").innerHTML = num13
+        document.getElementById("pension").innerHTML = num14
+        document.getElementById("othersavings").innerHTML = num15
+        document.getElementById("food").innerHTML = num16
+        document.getElementById("fuel").innerHTML = num17
+        document.getElementById("travel").innerHTML = num18
+        document.getElementById("entertainment").innerHTML = num19
+        document.getElementById("carbill").innerHTML = num20
+        document.getElementById("studentloans").innerHTML = num21
+        document.getElementById("creditcards").innerHTML = num22
+        document.getElementById("otherdebts").innerHTML = num23
+        document.getElementById("lifecover").innerHTML = num24
+        document.getElementById("buildinginsurance").innerHTML = num25
+        document.getElementById("healthinsurance").innerHTML = num26
+        document.getElementById("otherinsurance").innerHTML = num27
+        document.getElementById("TotalIncome").innerHTML = Number(num1) + Number(num2) + Number(num3) + Number(num4) + Number(num5) + Number(num6);
+        document.getElementById("TotalOutgoings").innerHTML = Number(num7) + Number(num8) + Number(num9) + Number(num10) + Number(num11) + Number(num12) + Number(num13) + Number(num14) + Number(num15) + Number(num16) + Number(num17) + Number(num18) + Number(num19) + Number(num20) + Number(num21) + Number(num22) + Number(num24) + Number(num26)+ Number(num27);
+}
+
+
+function divideBy() 
+{ 
+        num1 = document.getElementById("Isalary").value;
+        num2 = document.getElementById("Psalary").value;
+        num3 = document.getElementById("Ibonus").value;
+        num4 = document.getElementById("Pbonus").value;
+        num5 = document.getElementById("Iother").value;
+        num6 = document.getElementById("Pother").value;
+        num7 = document.getElementById("TVRelated").value;
+        num8 = document.getElementById("Water").value;
+        num9 = document.getElementById("GasandElectricity").value;
+        num10 = document.getElementById("TelephoneBill").value;
+        num11 = document.getElementById("RentorMortgage").value;
+        num12 = document.getElementById("ServiceCharges").value;
+        num13 = document.getElementById("Regular").value;
+        num14 = document.getElementById("Pension").value;
+        num15 = document.getElementById("OtherSavings").value;
+        num16 = document.getElementById("Food").value;
+        num17 = document.getElementById("Fuel").value;
+        num18 = document.getElementById("Travel").value;
+        num19 = document.getElementById("Entertainment").value;
+        num20 = document.getElementById("CarBill").value;
+        num21 = document.getElementById("StudentLoans").value;
+        num22 = document.getElementById("CreditCards").value;
+        num23 = document.getElementById("OtherDebts").value;
+        num24 = document.getElementById("LifeCover").value;
+        num25 = document.getElementById("BuildingInsurance").value;
+        num26 = document.getElementById("HealthInsurance").value;
+        num27 = document.getElementById("OtherInsurance").value;
+        document.getElementById("isalary").innerHTML = num1 
+        document.getElementById("psalary").innerHTML = num2
+        document.getElementById("ibonus").innerHTML = num3
+        document.getElementById("pbonus").innerHTML = num4
+        document.getElementById("iother").innerHTML = num5
+        document.getElementById("pother").innerHTML = num6
+        document.getElementById("tvrelated").innerHTML = num7
+        document.getElementById("water").innerHTML = num8
+        document.getElementById("gasandelectricity").innerHTML = num9
+        document.getElementById("telephonebill").innerHTML = num10
+        document.getElementById("rentormortgage").innerHTML = num11
+        document.getElementById("servicecharges").innerHTML = num12
+        document.getElementById("regular").innerHTML = num13
+        document.getElementById("pension").innerHTML = num14
+        document.getElementById("othersavings").innerHTML = num15
+        document.getElementById("food").innerHTML = num16
+        document.getElementById("fuel").innerHTML = num17
+        document.getElementById("travel").innerHTML = num18
+        document.getElementById("entertainment").innerHTML = num19
+        document.getElementById("carbill").innerHTML = num20
+        document.getElementById("studentloans").innerHTML = num21
+        document.getElementById("creditcards").innerHTML = num22
+        document.getElementById("otherdebts").innerHTML = num23
+        document.getElementById("lifecover").innerHTML = num24
+        document.getElementById("buildinginsurance").innerHTML = num25
+        document.getElementById("healthinsurance").innerHTML = num26
+        document.getElementById("otherinsurance").innerHTML = num27
+        document.getElementById("TotalIncome").innerHTML = num1 / num2 / num3 / num4 / num5 / num6;
+        document.getElementById("TotalOutgoings").innerHTML = Number(num7) + Number(num8) + Number(num9) + Number(num10) + Number(num11) + Number(num12) + Number(num13) + Number(num14) + Number(num15) + Number(num16) + Number(num17) + Number(num18) + Number(num19) + Number(num20) + Number(num21) + Number(num22) + Number(num24) + Number(num26)+ Number(num27);
+}
+</script>
+<form>
+<center>
+  <h1 style="color: #0094ff">MoneyMap</h1>
+</center>
+
+<p>Welcome to the MoneyMap Financial Planning Tool. Developed, maintained and property of CJFP. You can work your monthly expenses and download a copy at all times. </p>
+  
+<center>
+<p><b>Here input a summary of your monthly Income</b></p><br>
+My Net Salary :<input type="Number" id="Isalary" /> <br>
+Partner's Net Salary: <input type="Number" id="Psalary" /><br>
+Patner's Bonus: <input type="Number" id="Ibonus" /><br>
+My Bonus: <input type="Number" id="Pbonus" /><br>
+My Other Income: <input type="Number" id="Iother" /><br>
+My Partner's Other Income: <input type="Number" id="Pother" /><br>
+
+<p><b>Here input a summary of your monthly Utility Bills</b></p><br>
+TV Related Bills: <input type="Number" id="TVRelated" /><br>
+Water Bill: <input type="Number" id="Water" /><br>
+GasandElectricity Bills: <input type="Number" id="GasandElectricity" /><br>
+Telephone Bill: <input type="Number" id="TelephoneBill" /><br>
+Rent/Mortgage: <input type="Number" id="RentorMortgage" /><br>
+Service Charges: <input type="Number" id="ServiceCharges" /><br>
+
+<p><b>Here input a summary of your monthly Savings</b></p><br>
+Regular: <input type="Number" id="Regular" /><br>
+Pension: <input type="Number" id="Pension" /><br>
+Other Savings: <input type="Number" id="OtherSavings" /><br>
+
+<p><b>Here input a summary of your monthly Spending</b></p><br>
+Food: <input type="Number" id="Food" /><br>
+Fuel: <input type="Number" id="Fuel" /><br>
+Travel: <input type="Number" id="Travel" /><br>
+Entertainment: <input type="Number" id="Entertainment" /><br>
+
+<p><b>Here input a summary of your monthly Debts</b></p><br>
+Carbill: <input type="Number" id="CarBill" /><br>
+Student Loans: <input type="Number" id="StudentLoans" /><br>
+Credit Cards: <input type="Number" id="CreditCards" /><br>
+Other Debts: <input type="Number" id="OtherDebts" /><br>
+
+<p><b>Here input a summary of your monthly Protection</b></p><br>
+Life Cover: <input type="Number" id="LifeCover" /><br>
+Building Insurance: <input type="Number" id="BuildingInsurance" /><br>
+Health Insurance: <input type="Number" id="HealthInsurance" /><br>
+Other Insurance: <input type="Number" id="OtherInsurance" /><br>
+<br>
+<input type="button" onClick="multiplyBy()" Value="Click here to view your Details" />
+</center>
+</form>
+<div id="htmlContent">
+<center>
+  <h1 style="color: #0094ff">Charles James Financial Planning</h1>
+  <h3>Financial Questionnaire</h3>
+ </center> 
+ <center>
+ <div class="row">
+  <div class="column">
+    <table>
+      <tr><th> </th>
+        <th>You</th>
+        <th>Partner</th>
+      </tr>
+      <tr>
+        <td>Net Salary (£)</td>
+        <td><span id = "isalary"></span></td>
+        <td><span id = "psalary"></span></td>
+      </tr>
+      <tr>
+        <td>Bonus (£)</td>
+        <td><span id = "ibonus"></span></td>
+        <td><span id = "pbonus"></span></td>
+      </tr>
+      <tr>
+        <td>Other (£)</td>
+        <td><span id = "iother"></span></td>
+        <td><span id = "pother"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <h2> Total Income (£) : <span id = "TotalIncome"></span> </h2>
+  <br>
+  <h3> Below is a breakdown of your Outgoings Monthly</h3>
+  <br>
+  <p class:center> Here is your monthly Utility Bills Outgoing</p>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Utility Bills</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>TV Related</td>
+        <td><span id = "tvrelated"></span></td>
+      </tr>
+      <tr>
+        <td>Water</td>
+        <td><span id = "water"></span></td>
+      </tr>
+      <tr>
+        <td>Gas/Electricity</td>
+        <td><span id = "gasandelectricity"></span></td>
+      </tr>
+      <tr>
+        <td>Telephone Bill</td>
+        <td><span id = "telephonebill"></span></td>
+      </tr>
+      <tr>
+        <td>Rent/Mortgage</td>
+        <td><span id = "rentormortgage"></span></td>
+      </tr>
+      <tr>
+        <td>Service Charges</td>
+        <td><span id = "servicecharges"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <p class:center> Here is your monthly Savings</p>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Savings</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>Regular</td>
+        <td><span id = "regular"></span></td>
+      </tr>
+      <tr>
+        <td>Pension</td>
+        <td><span id = "pension"></span></td>
+      </tr>
+      <tr>
+        <td>Other Savings</td>
+        <td><span id = "othersavings"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <p class:center> Here is your monthly Spending</p>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Spending</th>
+        <th>Amount(£)</th>
+      </tr>
+      <tr>
+        <td>Food</td>
+        <td><span id = "food"></span></td>
+      </tr>
+      <tr>
+        <td>Fuel</td>
+        <td><span id = "fuel"></span></td>
+      </tr>
+      <tr>
+        <td>Travel</td>
+        <td><span id = "travel"></span></td>
+      </tr>
+      <tr>
+        <td>Entertainment</td>
+        <td><span id = "entertainment"></span></td>
+      </tr>
+    </table>
+  </div>
+  <P>1</P>
+  <br>
+  <p class:center> Here is your monthly Debts</p>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Debts</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>Car Bill</td>
+        <td><span id = "carbill"></span></td>
+      </tr>
+      <tr>
+        <td>Student Loans</td>
+        <td><span id = "studentloans"></span></td>
+      </tr>
+      <tr>
+        <td>Credit Cards</td>
+        <td><span id = "creditcards"></span></td>
+      </tr>
+      <tr>
+        <td>Other Debts</td>
+        <td><span id = "otherdebts"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <p class:center> Here is your monthly Protection</p>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Protection</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>Life Cover</td>
+        <td><span id = "lifecover"></span></td>
+      </tr>
+      <tr>
+        <td>Building Insurance</td>
+        <td><span id = "buildinginsurance"></span></td>
+      </tr>
+      <tr>
+        <td>Health Insurance</td>
+        <td><span id = "healthinsurance"></span></td>
+      </tr>
+       <tr>
+        <td>Other Insurance</td>
+        <td><span id = "otherinsurance"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <h2> Total Outgoings (£) : <span id = "TotalOutgoings"></span> </h2>
+  <br>
+</div>
+</center>
+</div>
+<div id="editor"></div>
+<center>
+<p> Happy with what you see, go ahead and hit generate PDF below </p>
+  <p>
+    <button id="generatePDF">generate PDF</button>
+  </p>
+ Ref:<a href="https://www.charlesjames.com/">Charles James Financial Planning</a>
+</center>
+   <script>
+      var doc = new jsPDF('1', 'pt', 'letter');
+      var specialElementHandlers = {
+        '#editor': function (element, renderer) {
+          return true;
+        }
+      };
+
+      //margins.left, // x coord   margins.top, { // y coord
+      $('#generatePDF').click(function () {
+       doc.fromHTML($('#htmlContent').html(), 80, 20, {
+        'width': 500,
+        'elementHandlers': specialElementHandlers
+      });
+          doc.save('sample_file.pdf');
+      });
+   </script>
+</body>
+</html>
