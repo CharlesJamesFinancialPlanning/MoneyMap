@@ -5,7 +5,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
 <title>JavaScript program to calculate multiplication and division of two numbers </title>
 <style type="text/css">
+
 body {margin: 50px;}
+#d1 { height: 150px; }
 table {  
        font-family: arial, sans-serif;  
        border-collapse: collapse;  
@@ -33,6 +35,19 @@ table {
 <script>
 function multiplyBy()
 {
+        ron1 = document.getElementById("Fname").value;
+        ron2 = document.getElementById("Pfname").value;
+        ron3 = document.getElementById("Lname").value;
+        ron4 = document.getElementById("Plname").value;
+        ron5 = document.getElementById("Ads").value;
+        ron6 = document.getElementById("Num").value;
+        ron7 = document.getElementById("Pnum").value;
+        ron8 = document.getElementById("Eads").value;
+        ron9 = document.getElementById("Peads").value;
+        ron10 = document.getElementById("Da").value;
+        ron11 = document.getElementById("Dob").value;
+        ron12 = document.getElementById("PDob").value;
+        ron13 = document.getElementById("Aname").value;
         num1 = document.getElementById("Isalary").value;
         num2 = document.getElementById("Psalary").value;
         num3 = document.getElementById("Ibonus").value;
@@ -60,6 +75,19 @@ function multiplyBy()
         num25 = document.getElementById("BuildingInsurance").value;
         num26 = document.getElementById("HealthInsurance").value;
         num27 = document.getElementById("OtherInsurance").value;
+        document.getElementById("fname").innerHTML = ron1
+        document.getElementById("pfname").innerHTML = ron2
+        document.getElementById("lname").innerHTML = ron3
+        document.getElementById("plname").innerHTML = ron4
+        document.getElementById("ads").innerHTML = ron5
+        document.getElementById("num").innerHTML = ron6
+        document.getElementById("pnum").innerHTML = ron7
+        document.getElementById("eads").innerHTML = ron8
+        document.getElementById("peads").innerHTML = ron9
+        document.getElementById("da").innerHTML = ron10
+        document.getElementById("dob").innerHTML = ron11
+        document.getElementById("pdob").innerHTML = ron12
+        document.getElementById("aname").innerHTML = ron13
         document.getElementById("isalary").innerHTML = num1
         document.getElementById("psalary").innerHTML = num2
         document.getElementById("ibonus").innerHTML = num3
@@ -91,75 +119,33 @@ function multiplyBy()
         document.getElementById("TotalOutgoings").innerHTML = Number(num7) + Number(num8) + Number(num9) + Number(num10) + Number(num11) + Number(num12) + Number(num13) + Number(num14) + Number(num15) + Number(num16) + Number(num17) + Number(num18) + Number(num19) + Number(num20) + Number(num21) + Number(num22) + Number(num24) + Number(num26)+ Number(num27);
 }
 
-
-function divideBy() 
-{ 
-        num1 = document.getElementById("Isalary").value;
-        num2 = document.getElementById("Psalary").value;
-        num3 = document.getElementById("Ibonus").value;
-        num4 = document.getElementById("Pbonus").value;
-        num5 = document.getElementById("Iother").value;
-        num6 = document.getElementById("Pother").value;
-        num7 = document.getElementById("TVRelated").value;
-        num8 = document.getElementById("Water").value;
-        num9 = document.getElementById("GasandElectricity").value;
-        num10 = document.getElementById("TelephoneBill").value;
-        num11 = document.getElementById("RentorMortgage").value;
-        num12 = document.getElementById("ServiceCharges").value;
-        num13 = document.getElementById("Regular").value;
-        num14 = document.getElementById("Pension").value;
-        num15 = document.getElementById("OtherSavings").value;
-        num16 = document.getElementById("Food").value;
-        num17 = document.getElementById("Fuel").value;
-        num18 = document.getElementById("Travel").value;
-        num19 = document.getElementById("Entertainment").value;
-        num20 = document.getElementById("CarBill").value;
-        num21 = document.getElementById("StudentLoans").value;
-        num22 = document.getElementById("CreditCards").value;
-        num23 = document.getElementById("OtherDebts").value;
-        num24 = document.getElementById("LifeCover").value;
-        num25 = document.getElementById("BuildingInsurance").value;
-        num26 = document.getElementById("HealthInsurance").value;
-        num27 = document.getElementById("OtherInsurance").value;
-        document.getElementById("isalary").innerHTML = num1 
-        document.getElementById("psalary").innerHTML = num2
-        document.getElementById("ibonus").innerHTML = num3
-        document.getElementById("pbonus").innerHTML = num4
-        document.getElementById("iother").innerHTML = num5
-        document.getElementById("pother").innerHTML = num6
-        document.getElementById("tvrelated").innerHTML = num7
-        document.getElementById("water").innerHTML = num8
-        document.getElementById("gasandelectricity").innerHTML = num9
-        document.getElementById("telephonebill").innerHTML = num10
-        document.getElementById("rentormortgage").innerHTML = num11
-        document.getElementById("servicecharges").innerHTML = num12
-        document.getElementById("regular").innerHTML = num13
-        document.getElementById("pension").innerHTML = num14
-        document.getElementById("othersavings").innerHTML = num15
-        document.getElementById("food").innerHTML = num16
-        document.getElementById("fuel").innerHTML = num17
-        document.getElementById("travel").innerHTML = num18
-        document.getElementById("entertainment").innerHTML = num19
-        document.getElementById("carbill").innerHTML = num20
-        document.getElementById("studentloans").innerHTML = num21
-        document.getElementById("creditcards").innerHTML = num22
-        document.getElementById("otherdebts").innerHTML = num23
-        document.getElementById("lifecover").innerHTML = num24
-        document.getElementById("buildinginsurance").innerHTML = num25
-        document.getElementById("healthinsurance").innerHTML = num26
-        document.getElementById("otherinsurance").innerHTML = num27
-        document.getElementById("TotalIncome").innerHTML = num1 / num2 / num3 / num4 / num5 / num6;
-        document.getElementById("TotalOutgoings").innerHTML = Number(num7) + Number(num8) + Number(num9) + Number(num10) + Number(num11) + Number(num12) + Number(num13) + Number(num14) + Number(num15) + Number(num16) + Number(num17) + Number(num18) + Number(num19) + Number(num20) + Number(num21) + Number(num22) + Number(num24) + Number(num26)+ Number(num27);
-}
 </script>
 <form>
 <center>
   <h1 style="color: #0094ff">MoneyMap</h1>
 </center>
 
-<p>Welcome to the MoneyMap Financial Planning Tool. Developed, maintained and property of CJFP. You can work your monthly expenses and download a copy at all times. </p>
-  
 <center>
+<h4>Welcome to the MoneyMap Financial Planning Tool. Developed, maintained and property of CJFP. You can work your monthly expenses and download a copy at all times. </h4><br>
+
+<p><b> Please fill in your details in the spaces below </b></p><br>
+</center>
+
+<center>
+First Name :<input type="text" id="Fname" /> <br>
+Partner's First Name: <input type="text" id="Pfname" /><br>
+Last Name :<input type="text" id="Lname" /> <br>
+Partner's Last Name: <input type="text" id="Plname" /><br>
+Date of Birth:<input type="text" id="dob" /> <br>
+Partner's Date of Birth: <input type="text" id="Plname" /><br>
+Address: <input type="text" id="Ads" /><br>
+Your Contact Number: <input type="Number" id="Num" /><br>
+Partner's Contact Number: <input type="Number" id="Pnum" /><br>
+Email Address: <input type="text" id="Eads" /><br>
+Partner's Email Address:<input type="text" id="Peads" /><br>
+Date:<input type="text" id="Da" /><br>
+Adviser Name: <input type="text" id="Aname" /><br> 
+
 <p><b>Here input a summary of your monthly Income</b></p><br>
 My Net Salary :<input type="Number" id="Isalary" /> <br>
 Partner's Net Salary: <input type="Number" id="Psalary" /><br>
@@ -199,7 +185,7 @@ Building Insurance: <input type="Number" id="BuildingInsurance" /><br>
 Health Insurance: <input type="Number" id="HealthInsurance" /><br>
 Other Insurance: <input type="Number" id="OtherInsurance" /><br>
 <br>
-<input type="button" onClick="multiplyBy()" Value="Click here to view your Details" />
+<input type="button" onClick="multiplyBy()" Value="Click here to view your Details" /><br>
 </center>
 </form>
 <div id="htmlContent">
@@ -216,33 +202,69 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
         <th>Partner</th>
       </tr>
       <tr>
-        <td>Net Salary (£)</td>
+        <td>First Name</td>
+        <td><span id = "fname"></span></td>
+        <td><span id = "pfname"></span></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><span id = "lname"></span></td>
+        <td><span id = "plname"></span></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><span id = "ads"></span></td>
+        <td><span id = "ads"></span></td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td><span id = "dob"></span></td>
+        <td><span id = "pdob"></span></td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td><span id = "num"></span></td>
+        <td><span id = "pnum"></span></td>
+      </tr>
+      <tr>
+        <td>Email Address</td>
+        <td><span id = "eads"></span></td>
+        <td><span id = "peads"></span></td>
+      </tr>
+      </table>
+  </div> 
+  <br>
+  <p class:center> Here is your monthly Income Summary</p><br>
+  <div class="column">
+    <table>
+      <tr><th> </th>
+        <th>You</th>
+        <th>Partner</th>
+      </tr>
+      <tr>
+        <td>Net Salary (Â£)</td>
         <td><span id = "isalary"></span></td>
         <td><span id = "psalary"></span></td>
       </tr>
       <tr>
-        <td>Bonus (£)</td>
+        <td>Bonus (Â£)</td>
         <td><span id = "ibonus"></span></td>
         <td><span id = "pbonus"></span></td>
       </tr>
       <tr>
-        <td>Other (£)</td>
+        <td>Other (Â£)</td>
         <td><span id = "iother"></span></td>
         <td><span id = "pother"></span></td>
       </tr>
     </table>
   </div>
   <br>
-  <h2> Total Income (£) : <span id = "TotalIncome"></span> </h2>
-  <br>
-  <h3> Below is a breakdown of your Outgoings Monthly</h3>
-  <br>
-  <p class:center> Here is your monthly Utility Bills Outgoing</p>
+  <h2> Total Income (Â£) : <span id = "TotalIncome"></span> </h2>
   <div class="column">
     <table>
       <tr>
         <th>Utility Bills</th>
-        <th>Amount (£)</th>
+        <th>Amount (Â£)</th>
       </tr>
       <tr>
         <td>TV Related</td>
@@ -271,12 +293,11 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     </table>
   </div>
   <br>
-  <p class:center> Here is your monthly Savings</p>
-  <div class="column">
+  <div>
     <table>
       <tr>
         <th>Savings</th>
-        <th>Amount (£)</th>
+        <th>Amount (Â£)</th>
       </tr>
       <tr>
         <td>Regular</td>
@@ -293,12 +314,14 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     </table>
   </div>
   <br>
-  <p class:center> Here is your monthly Spending</p>
+   <p hidden><em> Money Map </em><p>
+   <p hidden> Charles James Financial Planning <p>
+  <br>
   <div class="column">
     <table>
       <tr>
         <th>Spending</th>
-        <th>Amount(£)</th>
+        <th>Amount(Â£)</th>
       </tr>
       <tr>
         <td>Food</td>
@@ -318,14 +341,12 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
       </tr>
     </table>
   </div>
-  <P>1</P>
   <br>
-  <p class:center> Here is your monthly Debts</p>
   <div class="column">
     <table>
       <tr>
         <th>Debts</th>
-        <th>Amount (£)</th>
+        <th>Amount (Â£)</th>
       </tr>
       <tr>
         <td>Car Bill</td>
@@ -346,12 +367,11 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     </table>
   </div>
   <br>
-  <p class:center> Here is your monthly Protection</p>
   <div class="column">
     <table>
       <tr>
         <th>Protection</th>
-        <th>Amount (£)</th>
+        <th>Amount (Â£)</th>
       </tr>
       <tr>
         <td>Life Cover</td>
@@ -372,10 +392,15 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     </table>
   </div>
   <br>
-  <h2> Total Outgoings (£) : <span id = "TotalOutgoings"></span> </h2>
+  <h2> Total Outgoings (Â£) : <span id = "TotalOutgoings"></span> </h2>
   <br>
 </div>
 </center>
+  <br>
+<p class:left> Adviser Name: <span id ="aname"></span></p><br>
+<p class:left> Client Name: <span id = "fname"></span></p><br>
+<p class:left> Date: <span id = "da"></span></p><br>
+<p class:left> Client Signature: <span id = "fname"></span></p><br> 
 </div>
 <div id="editor"></div>
 <center>
