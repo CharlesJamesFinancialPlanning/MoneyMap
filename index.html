@@ -6,6 +6,7 @@
     <title>Convert HTML to PDF - Codingdiksha.com</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script> 
     <style type="text/css">
 body {
   background-color: #92a8d1;
@@ -213,6 +214,49 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
 <input type="button" onClick="multiplyBy()" Value="Click here to view your Details" /><br>
 </center>
 </form>
+<p onload="hpmpGraph()">
+    
+    <script>
+      
+      function hpmpGraph() {//from   w w  w. j  a v  a 2  s . c  o  m
+      
+      num1 = document.getElementById("Isalary").value;
+        num2 = document.getElementById("Psalary").value;
+      document.getElementById("isalary").innerHTML = num1
+        document.getElementById("psalary").innerHTML = num2
+      
+         var hp = Number(num1)
+            mp = Number(num2)
+            ctx = document.getElementById('hpmpratio').getContext('2d');
+         var   data = {
+            labels: ["My Salary","My Partner's Salary"],
+            datasets:
+               [{
+                  data: [hp,mp],
+                  backgroundColor: ["#EF0000","#0000EF"],
+                  hoverBackgroundColor: ["#FF0000","#0000FF"]
+               }]
+         };
+         var options = {};
+         var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: options
+         });
+      }
+   
+      </script> 
+
+</p>
+
+<form name="hpmpForm" method="post">
+
+
+<center> <button type="button" onclick="hpmpGraph();">Click here to view your Chart</button> </center>
+         
+
+<canvas id="hpmpratio" height="100"></canvas> 
+</form>  
  <div id="content">
        <center>
   <h1 style="color: #0094ff">Charles James Financial Planning</h1>
@@ -266,29 +310,29 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
         <th>Partner</th>
       </tr>
       <tr>
-        <td>Net Salary (Â£)</td>
+        <td>Net Salary (£)</td>
         <td><span id = "isalary"></span></td>
         <td><span id = "psalary"></span></td>
       </tr>
       <tr>
-        <td>Bonus (Â£)</td>
+        <td>Bonus (£)</td>
         <td><span id = "ibonus"></span></td>
         <td><span id = "pbonus"></span></td>
       </tr>
       <tr>
-        <td>Other (Â£)</td>
+        <td>Other (£)</td>
         <td><span id = "iother"></span></td>
         <td><span id = "pother"></span></td>
       </tr>
     </table>
   </div>
   <br>
-  <h2> Total Income (Â£) : <span id = "TotalIncome"></span> </h2>
+  <h2> Total Income (£) : <span id = "TotalIncome"></span> </h2>
   <div class="column">
     <table>
       <tr>
         <th>Utility Bills</th>
-        <th>Amount (Â£)</th>
+        <th>Amount (£)</th>
       </tr>
       <tr>
         <td>TV Related</td>
@@ -321,7 +365,7 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     <table>
       <tr>
         <th>Savings</th>
-        <th>Amount (Â£)</th>
+        <th>Amount (£)</th>
       </tr>
       <tr>
         <td>Regular</td>
@@ -342,7 +386,7 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     <table>
       <tr>
         <th>Spending</th>
-        <th>Amount(Â£)</th>
+        <th>Amount(£)</th>
       </tr>
       <tr>
         <td>Food</td>
@@ -367,7 +411,7 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     <table>
       <tr>
         <th>Debts</th>
-        <th>Amount (Â£)</th>
+        <th>Amount (£)</th>
       </tr>
       <tr>
         <td>Car Bill</td>
@@ -392,7 +436,7 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     <table>
       <tr>
         <th>Protection</th>
-        <th>Amount (Â£)</th>
+        <th>Amount (£)</th>
       </tr>
       <tr>
         <td>Life Cover</td>
@@ -413,7 +457,7 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
     </table>
   </div>
   <br>
-  <h2> Total Outgoings (Â£) : <span id = "TotalOutgoings"></span> </h2>
+  <h2> Total Outgoings (£) : <span id = "TotalOutgoings"></span> </h2>
   <br>
 </div>
 </center>
@@ -464,6 +508,14 @@ Other Insurance: <input type="Number" id="OtherInsurance" /><br>
   <p>
     <button onclick="createPDF()">generate PDF</button>
   </p>
+  <p>
+  You can click on 
+  <a href="mailto:ronaldazechio@charlesjames.com?cc=jackcohen@charlesjames.com, grahamatkin@charlesjames.com, &subject= Financial Planning Questionnaire&body=Dear Ronald,                        
+  
+  Please find attached a copy of my fully signed and completed Financial Planning Questionnaire.">Send Email</a> to attach your generated pdf and email it directly to us </p>
+  
+  <br>
+ 
  Ref:<a href="https://www.charlesjames.com/">Charles James Financial Planning</a>
 </center>
     </div>
