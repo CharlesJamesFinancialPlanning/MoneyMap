@@ -1,0 +1,676 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert HTML to PDF - Codingdiksha.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script> 
+    <style type="text/css">
+body {
+  background-color: #92a8d1;
+}
+#d1 { height: 150px; }
+table {  
+       font-family: arial, sans-serif;  
+       border-collapse: collapse;  
+      text-align: left;
+      width: 90%;
+      margin: 0px auto;
+      }
+  #htmlContent{
+     text-align: center;
+  }  
+  th
+  {
+      background-color: grey; 
+      text-align: center; 
+  }
+  td,button {  
+     border: 1px solid #dddddd;  
+     padding: 4px;  
+  }  
+  button {  
+    border: 1px solid black;   
+  } 
+  tr:hover {background-color: coral;}
+  
+  td:nth-child(2) {  
+    width: 40%;
+  }
+  
+  td:nth-child(3) {  
+    width: 40%;
+  }
+  #sig-canvas {
+  border: 2px dotted #CCCCCC;
+  border-radius: 15px;
+  cursor: crosshair;
+}
+</style> 
+</head>
+
+<body>
+
+<script>
+function multiplyBy()
+{
+        ron1 = document.getElementById("Fname").value;
+        ron2 = document.getElementById("Pfname").value;
+        ron3 = document.getElementById("Lname").value;
+        ron4 = document.getElementById("Plname").value;
+        ron5 = document.getElementById("Ads").value;
+        ron6 = document.getElementById("Num").value;
+        ron7 = document.getElementById("Pnum").value;
+        ron8 = document.getElementById("Eads").value;
+        ron9 = document.getElementById("Peads").value;
+        ron10 = document.getElementById("Da").value;
+        ron11 = document.getElementById("Dob").value;
+        ron12 = document.getElementById("Pdob").value;
+        ron13 = document.getElementById("Aname").value;
+        num1 = document.getElementById("Isalary").value;
+        num2 = document.getElementById("Psalary").value;
+        num3 = document.getElementById("Ibonus").value;
+        num4 = document.getElementById("Pbonus").value;
+        num5 = document.getElementById("Iother").value;
+        num6 = document.getElementById("Pother").value;
+        num7 = document.getElementById("TVRelated").value;
+        num8 = document.getElementById("Water").value;
+        num9 = document.getElementById("GasandElectricity").value;
+        num10 = document.getElementById("TelephoneBill").value;
+        num11 = document.getElementById("RentorMortgage").value;
+        num12 = document.getElementById("ServiceCharges").value;
+        num13 = document.getElementById("Regular").value;
+        num14 = document.getElementById("Pension").value;
+        num15 = document.getElementById("OtherSavings").value;
+        num16 = document.getElementById("Food").value;
+        num17 = document.getElementById("Fuel").value;
+        num18 = document.getElementById("Travel").value;
+        num19 = document.getElementById("Entertainment").value;
+        num20 = document.getElementById("CarBill").value;
+        num21 = document.getElementById("StudentLoans").value;
+        num22 = document.getElementById("CreditCards").value;
+        num23 = document.getElementById("OtherDebts").value;
+        num24 = document.getElementById("LifeCover").value;
+        num25 = document.getElementById("BuildingInsurance").value;
+        num26 = document.getElementById("HealthInsurance").value;
+        num27 = document.getElementById("OtherInsurance").value;
+        document.getElementById("fname").innerHTML = ron1
+        document.getElementById("pfname").innerHTML = ron2
+        document.getElementById("lname").innerHTML = ron3
+        document.getElementById("plname").innerHTML = ron4
+        document.getElementById("ads").innerHTML = ron5
+        document.getElementById("num").innerHTML = ron6
+        document.getElementById("pnum").innerHTML = ron7
+        document.getElementById("eads").innerHTML = ron8
+        document.getElementById("peads").innerHTML = ron9
+        document.getElementById("da").innerHTML = ron10
+        document.getElementById("dob").innerHTML = ron11
+        document.getElementById("pdob").innerHTML = ron12
+        document.getElementById("aname").innerHTML = ron13
+        document.getElementById("isalary").innerHTML = num1
+        document.getElementById("psalary").innerHTML = num2
+        document.getElementById("ibonus").innerHTML = num3
+        document.getElementById("pbonus").innerHTML = num4
+        document.getElementById("iother").innerHTML = num5
+        document.getElementById("pother").innerHTML = num6
+        document.getElementById("tvrelated").innerHTML = num7
+        document.getElementById("water").innerHTML = num8
+        document.getElementById("gasandelectricity").innerHTML = num9
+        document.getElementById("telephonebill").innerHTML = num10
+        document.getElementById("rentormortgage").innerHTML = num11
+        document.getElementById("servicecharges").innerHTML = num12
+        document.getElementById("regular").innerHTML = num13
+        document.getElementById("pension").innerHTML = num14
+        document.getElementById("othersavings").innerHTML = num15
+        document.getElementById("food").innerHTML = num16
+        document.getElementById("fuel").innerHTML = num17
+        document.getElementById("travel").innerHTML = num18
+        document.getElementById("entertainment").innerHTML = num19
+        document.getElementById("carbill").innerHTML = num20
+        document.getElementById("studentloans").innerHTML = num21
+        document.getElementById("creditcards").innerHTML = num22
+        document.getElementById("otherdebts").innerHTML = num23
+        document.getElementById("lifecover").innerHTML = num24
+        document.getElementById("buildinginsurance").innerHTML = num25
+        document.getElementById("healthinsurance").innerHTML = num26
+        document.getElementById("otherinsurance").innerHTML = num27
+        document.getElementById("TotalIncome").innerHTML = Number(num1) + Number(num2) + Number(num3) + Number(num4) + Number(num5) + Number(num6);
+        document.getElementById("TotalOutgoings").innerHTML = Number(num7) + Number(num8) + Number(num9) + Number(num10) + Number(num11) + Number(num12) + Number(num13) + Number(num14) + Number(num15) + Number(num16) + Number(num17) + Number(num18) + Number(num19) + Number(num20) + Number(num21) + Number(num22) + Number(num24) + Number(num26)+ Number(num27);
+}
+
+</script>
+
+
+
+
+<form>
+<center>
+  <h1 style="color: #0094ff">MoneyMap</h1>
+</center>
+
+<center>
+<h4>Welcome to the MoneyMap Financial Planning Tool. Developed, maintained and property of CJFP. You can work on your monthly expenses and download a copy at all times. </h4><br>
+
+<p><b> Please fill in your details in the spaces below </b></p><br>
+</center>
+
+<center>
+First Name :<input type="text" id="Fname" /><br>
+Partner's First Name: <input type="text" id="Pfname" /><br>
+Last Name :<input type="text" id="Lname" /> <br>
+Partner's Last Name: <input type="text" id="Plname" /><br>
+Date of Birth:<input type="text" id="Dob" /> <br>
+Partner's Date of Birth: <input type="text" id="Pdob" /><br>
+Address: <input type="text" id="Ads" /><br>
+Your Contact Number: <input type="Number" id="Num" /><br>
+Partner's Contact Number: <input type="Number" id="Pnum" /><br>
+Email Address: <input type="text" id="Eads" /><br>
+Partner's Email Address:<input type="text" id="Peads" /><br>
+Date:<input type="text" id="Da" /><br>
+Adviser Name: <input type="text" id="Aname" /><br> 
+
+<p><b>Here input a summary of your monthly Income</b></p><br>
+My Net Salary :<input type="Number" id="Isalary" /> <br>
+Partner's Net Salary: <input type="Number" id="Psalary" /><br>
+Patner's Bonus: <input type="Number" id="Ibonus" /><br>
+My Bonus: <input type="Number" id="Pbonus" /><br>
+My Other Income: <input type="Number" id="Iother" /><br>
+My Partner's Other Income: <input type="Number" id="Pother" /><br>
+
+<p><b>Here input a summary of your monthly Utility Bills</b></p><br>
+TV Related Bills: <input type="Number" id="TVRelated" /><br>
+Water Bill: <input type="Number" id="Water" /><br>
+GasandElectricity Bills: <input type="Number" id="GasandElectricity" /><br>
+Telephone Bill: <input type="Number" id="TelephoneBill" /><br>
+Rent/Mortgage: <input type="Number" id="RentorMortgage" /><br>
+Service Charges: <input type="Number" id="ServiceCharges" /><br>
+
+<p><b>Here input a summary of your monthly Savings</b></p><br>
+Regular: <input type="Number" id="Regular" /><br>
+Pension: <input type="Number" id="Pension" /><br>
+Other Savings: <input type="Number" id="OtherSavings" /><br>
+
+<p><b>Here input a summary of your monthly Spending</b></p><br>
+Food: <input type="Number" id="Food" /><br>
+Fuel: <input type="Number" id="Fuel" /><br>
+Travel: <input type="Number" id="Travel" /><br>
+Entertainment: <input type="Number" id="Entertainment" /><br>
+
+<p><b>Here input a summary of your monthly Debts</b></p><br>
+Carbill: <input type="Number" id="CarBill" /><br>
+Student Loans: <input type="Number" id="StudentLoans" /><br>
+Credit Cards: <input type="Number" id="CreditCards" /><br>
+Other Debts: <input type="Number" id="OtherDebts" /><br>
+
+<p><b>Here input a summary of your monthly Protection</b></p><br>
+Life Cover: <input type="Number" id="LifeCover" /><br>
+Building Insurance: <input type="Number" id="BuildingInsurance" /><br>
+Health Insurance: <input type="Number" id="HealthInsurance" /><br>
+Other Insurance: <input type="Number" id="OtherInsurance" /><br>
+<br>
+<br>
+<input type="button" onClick="multiplyBy()" Value="Click here to view your Details" /><br>
+</center>
+</form>
+<p onload="hpmpGraph()">
+    
+    <script>
+      
+      function hpmpGraph() {//from   w w  w. j  a v  a 2  s . c  o  m
+      
+      num1 = document.getElementById("Isalary").value;
+        num2 = document.getElementById("Psalary").value;
+      document.getElementById("isalary").innerHTML = num1
+        document.getElementById("psalary").innerHTML = num2
+      
+         var hp = Number(num1)
+            mp = Number(num2)
+            ctx = document.getElementById('hpmpratio').getContext('2d');
+         var   data = {
+            labels: ["My Salary","My Partner's Salary"],
+            datasets:
+               [{
+                  data: [hp,mp],
+                  backgroundColor: ["#EF0000","#0000EF"],
+                  hoverBackgroundColor: ["#FF0000","#0000FF"]
+               }]
+         };
+         var options = {};
+         var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: options
+         });
+      }
+   
+      </script> 
+
+</p>
+
+<form name="hpmpForm" method="post">
+
+
+<center> <button type="button" onclick="hpmpGraph();">Click here to view your Chart</button> </center>
+         
+
+<canvas id="hpmpratio" height="100"></canvas> 
+</form>  
+ <div id="content">
+       <center>
+  <h1 style="color: #0094ff">Charles James Financial Planning</h1>
+  <h3>Financial Questionnaire</h3>
+ </center> 
+ <center>
+ <div class="row">
+  <div class="column">
+    <table>
+      <tr><th> </th>
+        <th>You</th>
+        <th>Partner</th>
+      </tr>
+      <tr>
+        <td>First Name</td>
+        <td><span id = "fname"></span></td>
+        <td><span id = "pfname"></span></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><span id = "lname"></span></td>
+        <td><span id = "plname"></span></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td colspan = "2"><span id = "ads"></span></td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td><span id = "dob"></span></td>
+        <td><span id = "pdob"></span></td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td><span id = "num"></span></td>
+        <td><span id = "pnum"></span></td>
+      </tr>
+      <tr>
+        <td>Email Address</td>
+        <td><span id = "eads"></span></td>
+        <td><span id = "peads"></span></td>
+      </tr>
+      </table>
+  </div> 
+  <br>
+  <p class:center> Here is your monthly Income Summary</p><br>
+  <div class="column">
+    <table>
+      <tr><th> </th>
+        <th>You</th>
+        <th>Partner</th>
+      </tr>
+      <tr>
+        <td>Net Salary (£)</td>
+        <td><span id = "isalary"></span></td>
+        <td><span id = "psalary"></span></td>
+      </tr>
+      <tr>
+        <td>Bonus (£)</td>
+        <td><span id = "ibonus"></span></td>
+        <td><span id = "pbonus"></span></td>
+      </tr>
+      <tr>
+        <td>Other (£)</td>
+        <td><span id = "iother"></span></td>
+        <td><span id = "pother"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <h2> Total Income (£) : <span id = "TotalIncome"></span> </h2>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Utility Bills</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>TV Related</td>
+        <td><span id = "tvrelated"></span></td>
+      </tr>
+      <tr>
+        <td>Water</td>
+        <td><span id = "water"></span></td>
+      </tr>
+      <tr>
+        <td>Gas/Electricity</td>
+        <td><span id = "gasandelectricity"></span></td>
+      </tr>
+      <tr>
+        <td>Telephone Bill</td>
+        <td><span id = "telephonebill"></span></td>
+      </tr>
+      <tr>
+        <td>Rent/Mortgage</td>
+        <td><span id = "rentormortgage"></span></td>
+      </tr>
+      <tr>
+        <td>Service Charges</td>
+        <td><span id = "servicecharges"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div>
+    <table>
+      <tr>
+        <th>Savings</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>Regular</td>
+        <td><span id = "regular"></span></td>
+      </tr>
+      <tr>
+        <td>Pension</td>
+        <td><span id = "pension"></span></td>
+      </tr>
+      <tr>
+        <td>Other Savings</td>
+        <td><span id = "othersavings"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Spending</th>
+        <th>Amount(£)</th>
+      </tr>
+      <tr>
+        <td>Food</td>
+        <td><span id = "food"></span></td>
+      </tr>
+      <tr>
+        <td>Fuel</td>
+        <td><span id = "fuel"></span></td>
+      </tr>
+      <tr>
+        <td>Travel</td>
+        <td><span id = "travel"></span></td>
+      </tr>
+      <tr>
+        <td>Entertainment</td>
+        <td><span id = "entertainment"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Debts</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>Car Bill</td>
+        <td><span id = "carbill"></span></td>
+      </tr>
+      <tr>
+        <td>Student Loans</td>
+        <td><span id = "studentloans"></span></td>
+      </tr>
+      <tr>
+        <td>Credit Cards</td>
+        <td><span id = "creditcards"></span></td>
+      </tr>
+      <tr>
+        <td>Other Debts</td>
+        <td><span id = "otherdebts"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div class="column">
+    <table>
+      <tr>
+        <th>Protection</th>
+        <th>Amount (£)</th>
+      </tr>
+      <tr>
+        <td>Life Cover</td>
+        <td><span id = "lifecover"></span></td>
+      </tr>
+      <tr>
+        <td>Building Insurance</td>
+        <td><span id = "buildinginsurance"></span></td>
+      </tr>
+      <tr>
+        <td>Health Insurance</td>
+        <td><span id = "healthinsurance"></span></td>
+      </tr>
+       <tr>
+        <td>Other Insurance</td>
+        <td><span id = "otherinsurance"></span></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <h2> Total Outgoings (£) : <span id = "TotalOutgoings"></span> </h2>
+  <br>
+</div>
+</center>
+
+<p class:left> Adviser Name: <span id ="aname"></span></p>
+<p class:left> Date: <span id = "da"></span></p>
+<center><p class:left> Client Signature: <span id = "sig-image"></span></p><br></center>
+
+<div class="row" hidden>
+			<div class="col-md-12">
+				<h1>E-Signature</h1>
+				<p>Sign in the canvas below and save your signature as an image!</p>
+			</div>
+		</div>
+        <center>
+		<div class="row" >
+			<div class="col-md-12">
+		 		<canvas id="sig-canvas" width="500" height="130">
+		 			Get a better browser, bro.
+		 		</canvas>
+		 	</div>
+		</div>
+        </center>
+		<div class="row">
+			<div class="col-md-12">
+				<button class="btn btn-primary" id="sig-submitBtn" hidden>Submit Signature</button>
+				<center><button class="btn btn-default" id="sig-clearBtn">Signature</button> <center>
+			</div>
+		</div>
+		<br/>
+		<div class="row" hidden>
+			<div class="col-md-12">
+				<textarea id="sig-dataUrl" class="form-control" rows="5">Data URL for your signature will go here!</textarea>
+			</div>
+		</div>
+		<br/>
+		<div class="row" hidden>
+			<div class="col-md-12">
+				<img id="sig-image" src="" alt="Your signature will go here!"/>
+			</div>
+		</div>
+	</div>
+
+
+<div id="editor"></div>
+<center>
+<p> Happy with what you see, go ahead and hit generate PDF below </p>
+  <p>
+    <button onclick="createPDF()">generate PDF</button>
+  </p>
+  <p>
+  You can click on 
+  <a href="mailto:ronaldazechio@charlesjames.com?cc=jackcohen@charlesjames.com, grahamatkin@charlesjames.com, &subject= Financial Planning Questionnaire&body=Dear Ronald,                        
+  
+  Please find attached a copy of my fully signed and completed Financial Planning Questionnaire.">Send Email</a> to attach your generated pdf and email it directly to us </p>
+  
+  <br>
+ 
+ Ref:<a href="https://www.charlesjames.com/">Charles James Financial Planning</a>
+</center>
+    </div>
+    
+    <script>
+(function() {
+  window.requestAnimFrame = (function(callback) {
+    return window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.msRequestAnimaitonFrame ||
+      function(callback) {
+        window.setTimeout(callback, 1000 / 60);
+      };
+  })();
+  
+var canvas = document.getElementById("sig-canvas");
+  var ctx = canvas.getContext("2d");
+  ctx.strokeStyle = "#222222";
+  ctx.lineWidth = 4;
+
+  var drawing = false;
+  var mousePos = {
+    x: 0,
+    y: 0
+  };
+  var lastPos = mousePos;
+
+  canvas.addEventListener("mousedown", function(e) {
+    drawing = true;
+    lastPos = getMousePos(canvas, e);
+  }, false);
+
+  canvas.addEventListener("mouseup", function(e) {
+    drawing = false;
+  }, false);
+
+  canvas.addEventListener("mousemove", function(e) {
+    mousePos = getMousePos(canvas, e);
+  }, false);
+
+  // Add touch event support for mobile
+  canvas.addEventListener("touchstart", function(e) {
+
+  }, false);
+
+  canvas.addEventListener("touchmove", function(e) {
+    var touch = e.touches[0];
+    var me = new MouseEvent("mousemove", {
+      clientX: touch.clientX,
+      clientY: touch.clientY
+    });
+    canvas.dispatchEvent(me);
+  }, false);
+
+  canvas.addEventListener("touchstart", function(e) {
+    mousePos = getTouchPos(canvas, e);
+    var touch = e.touches[0];
+    var me = new MouseEvent("mousedown", {
+      clientX: touch.clientX,
+      clientY: touch.clientY
+    });
+    canvas.dispatchEvent(me);
+  }, false);
+
+  canvas.addEventListener("touchend", function(e) {
+    var me = new MouseEvent("mouseup", {});
+    canvas.dispatchEvent(me);
+  }, false);
+
+  function getMousePos(canvasDom, mouseEvent) {
+    var rect = canvasDom.getBoundingClientRect();
+    return {
+      x: mouseEvent.clientX - rect.left,
+      y: mouseEvent.clientY - rect.top
+    }
+  }
+
+  function getTouchPos(canvasDom, touchEvent) {
+    var rect = canvasDom.getBoundingClientRect();
+    return {
+      x: touchEvent.touches[0].clientX - rect.left,
+      y: touchEvent.touches[0].clientY - rect.top
+    }
+  }
+
+  function renderCanvas() {
+    if (drawing) {
+      ctx.moveTo(lastPos.x, lastPos.y);
+      ctx.lineTo(mousePos.x, mousePos.y);
+      ctx.stroke();
+      lastPos = mousePos;
+    }
+  }
+
+  // Prevent scrolling when touching the canvas
+  document.body.addEventListener("touchstart", function(e) {
+    if (e.target == canvas) {
+      e.preventDefault();
+    }
+  }, false);
+  document.body.addEventListener("touchend", function(e) {
+    if (e.target == canvas) {
+      e.preventDefault();
+    }
+  }, false);
+  document.body.addEventListener("touchmove", function(e) {
+    if (e.target == canvas) {
+      e.preventDefault();
+    }
+  }, false);
+
+  (function drawLoop() {
+    requestAnimFrame(drawLoop);
+    renderCanvas();
+  })();
+
+  function clearCanvas() {
+    canvas.width = canvas.width;
+  }
+
+  // Set up the UI
+  var sigText = document.getElementById("sig-dataUrl");
+  var sigImage = document.getElementById("sig-image");
+  var clearBtn = document.getElementById("sig-clearBtn");
+  var submitBtn = document.getElementById("sig-submitBtn");
+  clearBtn.addEventListener("click", function(e) {
+    clearCanvas();
+    sigText.innerHTML = "Data URL for your signature will go here!";
+    sigImage.setAttribute("src", "");
+  }, false);
+  submitBtn.addEventListener("click", function(e) {
+    var dataUrl = canvas.toDataURL();
+    sigText.innerHTML = dataUrl;
+    sigImage.setAttribute("src", dataUrl);
+  }, false);
+
+})();
+</script>
+
+
+    <script>
+        function createPDF() {
+            var pdf = document.getElementById("content");
+            var opt = {
+                margin: 1,
+                filename: 'html2pdf-converted.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas:  { scale: 2 },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(pdf).save();
+        }
+    </script>
+</body>
+
+</html>
